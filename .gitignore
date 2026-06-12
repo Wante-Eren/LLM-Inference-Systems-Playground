@@ -1,0 +1,48 @@
+# Local secrets and environment
+.env
+.env.*
+!.env.example
+.gradio/
+*.pem
+*.key
+*.crt
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Runtime output
+*.log
+*.pid
+core
+core.*
+
+# Model weights and datasets
+models/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# Build and generated output
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+llama.cpp/build/
+llama.cpp/models/
+llama.cpp/tools/ui/node_modules/
+llama.cpp/tools/ui/.svelte-kit/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
