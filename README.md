@@ -17,6 +17,14 @@
 
 ---
 
+## 演示视频
+
+完整实验演示视频已作为 GitHub Release 附件发布，包含本地 Agent、边缘端服务状态切换与实验验证过程：
+
+> [观看或下载：Embodied-Oms 实验验证视频（MP4）](https://github.com/Wante-Eren/-Embodied-Oms-/releases/download/demo-v1/embodied-oms-demo.mp4)
+
+视频文件超过 GitHub 普通仓库的单文件限制，因此未写入 Git 历史，避免克隆源码时下载大型媒体文件。
+
 ## 项目简介
 
 Embodied-Oms 面向显存和电池预算都有限的消费级边缘设备，探索一个具体问题：
@@ -183,7 +191,25 @@ python llama.cpp/dynamic_serving.py
 
 访问 `http://127.0.0.1:7860/`。
 
-### 6. 运行 Triton 基准
+### 6. 通过内网穿透进行远程演示
+
+项目支持使用 cpolar 将本机 Gradio 演示界面临时分享给导师或协作者。先确保本地服务与 Agent 已启动：
+
+```bash
+./start_bus.sh
+```
+
+然后在另一个终端创建临时公网隧道：
+
+```bash
+cpolar http 7860
+```
+
+将 cpolar 输出的 HTTPS 地址分享给远程观众即可。推荐只穿透 Gradio 前端端口 `7860`，不要直接暴露 llama.cpp 推理接口 `8080`。
+
+当前 Gradio 演示界面没有用户认证能力，因此远程演示应使用临时隧道，并在演示结束后立即关闭 cpolar。不要在公开网络环境中输入敏感信息或长期暴露服务。
+
+### 7. 运行 Triton 基准
 
 ```bash
 python benchmark.py
