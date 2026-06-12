@@ -21,7 +21,7 @@
 
 完整实验演示视频已作为 GitHub Release 附件发布，包含本地 Agent、边缘端服务状态切换与实验验证过程：
 
-> [观看或下载：Embodied-Oms 实验验证视频（MP4）](https://github.com/Wante-Eren/-Embodied-Oms-/releases/download/demo-v1/default.mp4)
+> [观看或下载：Embodied-Oms 实验验证视频（MP4）](https://github.com/Wante-Eren/LLM-Inference-Systems-Playground/releases/download/demo-v1/default.mp4)
 
 视频文件超过 GitHub 普通仓库的单文件限制，因此未写入 Git 历史，避免克隆源码时下载大型媒体文件。
 
@@ -123,8 +123,8 @@ CacheBlend static fusion PoC completed without crash.
 ### 1. 准备环境
 
 ```bash
-git clone https://github.com/Wante-Eren/-Embodied-Oms-.git
-cd ./-Embodied-Oms-
+git clone https://github.com/Wante-Eren/LLM-Inference-Systems-Playground.git
+cd LLM-Inference-Systems-Playground
 
 python -m venv .venv
 source .venv/bin/activate
