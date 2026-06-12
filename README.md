@@ -115,8 +115,8 @@ CacheBlend static fusion PoC completed without crash.
 ### 1. 准备环境
 
 ```bash
-git clone https://github.com/taow23408/Embodied-Oms.git
-cd Embodied-Oms
+git clone https://github.com/Wante-Eren/-Embodied-Oms-.git
+cd ./-Embodied-Oms-
 
 python -m venv .venv
 source .venv/bin/activate
